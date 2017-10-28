@@ -16,7 +16,7 @@ layout: compress
     <link rel="stylesheet" href="{{ '/assets/css/show.css?v=' 
     | append: site.github.build_revision | relative_url }}">
   </head>
-  <body>
+  <body onLoad="changeImage()">
   {{ content }}
   {% include vminpoly.html %}
   </body>

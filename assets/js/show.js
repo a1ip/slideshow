@@ -75,5 +75,5 @@
       });
     }
   };
-  document.FX = FX;
+  window.FX = FX;
 })()

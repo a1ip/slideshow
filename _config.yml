@@ -1,6 +1,6 @@
 theme: jekyll-theme-leap-day
 
-baseurl: "/show/" # the subpath of your site, e.g. /blog
+baseurl: /show # the subpath of your site, e.g. /blog
 #url: "http://a1ip.github.io" # the base hostname & protocol for your site
 permalink: /:title
 show_downloads: true

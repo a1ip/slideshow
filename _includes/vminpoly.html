@@ -23,6 +23,9 @@
     };
   }
 </script>
-<script src="/assets/js/vminpoly/tokenizer.js"></script>
-<script src="/assets/js/vminpoly/parser.js"></script>
-<script src="/assets/js/vminpoly/vminpoly.js"></script>
+<script src="{{ '/assets/js/vminpoly/tokenizer.js?v='
+    | append: site.github.build_revision | relative_url }}"></script>
+<script src="{{ '/assets/js/vminpoly/parser.js?v='
+    | append: site.github.build_revision | relative_url }}"></script>
+<script src="{{ '/assets/js/vminpoly/vminpoly.js?v='
+    | append: site.github.build_revision | relative_url }}"></script>

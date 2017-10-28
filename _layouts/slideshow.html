@@ -18,13 +18,7 @@
     <script type="text/javascript" src="{{ '/assets/js/show.js?v='
     | append: site.github.build_revision | relative_url }}"></script>
   </head>
-  <body>{{ content }}
-  <script type="text/javascript">
-    var refreshRate = 10000;
-    var fadeRate = 1000;
-    var jc = document.getElementById('JC');
-    changeImage(jc);
-    setInterval(changeImage(jc), refreshRate);
-  </script>
+  <body>
+    {{ content }}
   </body>
 </html>

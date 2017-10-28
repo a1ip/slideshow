@@ -78,15 +78,15 @@
   window.FX = FX;
 })()
 function changeImage(el, fade) {
-  FX.fadeOut(this.el, {
-    duration: this.fade,
+  FX.fadeOut(el, {
+    duration: fade,
     delay: 50,
     complete: function() {
-      this.el.style.backgroundImage =
+      el.style.backgroundImage =
         'url(https://source.unsplash.com/collection/1062065?sig=' +
         Math.random() + ')';
-      FX.fadeIn(this.el, {
-        duration: this.fade * 3,
+      FX.fadeIn(el, {
+        duration: fade * 3,
         delay: 50,
         complete: function(){}
       });

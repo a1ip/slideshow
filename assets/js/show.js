@@ -77,7 +77,7 @@
   };
   window.FX = FX;
 })()
-function changeImage(el) {
+function changeImage(el, fadeRate) {
   FX.fadeOut(el, {
     duration: fadeRate,
     delay: 50,

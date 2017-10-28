@@ -1,9 +1,9 @@
 <script type="text/javascript">
 Array.prototype.filter||(Array.prototype.filter=function(r){var t=this.length;if("function"!=typeof r)throw new TypeError;for(var i=new Array,e=arguments[1],o=0;o<t;o++)if(o in this){var n=this[o];r.call(e,n,o,this)&&i.push(n)}return i});
 </script>
-<script type="text/javascript" src="{{ '/assets/js/vminpoly/tokenizer.js?v='
-    | append: site.github.build_revision | relative_url }}"></script>
-<script type="text/javascript" src="{{ '/assets/js/vminpoly/parser.js?v='
-    | append: site.github.build_revision | relative_url }}"></script>
-<script type="text/javascript" src="{{ '/assets/js/vminpoly/vminpoly.js?v='
-    | append: site.github.build_revision | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/vminpoly/tokenizer.js'
+    | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/vminpoly/parser.js'
+    | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/vminpoly/vminpoly.js'
+    | relative_url }}"></script>

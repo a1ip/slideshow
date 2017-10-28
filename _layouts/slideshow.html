@@ -15,7 +15,7 @@
     | append: site.github.build_revision | relative_url }}"></script>-->
   </head>
   <body>
-  <style>body{margin:0;background-color:black}#JC{-o-background-size:contain;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:black;height:100vh;width:100vw}</style>
+  <style>body{margin:0;background-color:black}#JC{-o-background-size:contain;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:black;height:720px;width:1280px/*height:100vh;width:100vw*/}</style>
   {{ content }}
   <script type="text/javascript">
   var refreshRate = 10000;
@@ -106,11 +106,9 @@
       duration: fadeRate,
       delay: 50,
       complete: function() {
-        //jc.style.backgroundImage =
-          //'url(https://source.unsplash.com/collection/1062065?sig=' +
-          //Math.random() + ')';
-        jc.style.backgroundColor =
-          '#' + Math.floor(Math.random() * 999);
+        jc.style.backgroundImage =
+          'url(https://source.unsplash.com/collection/1062065?sig=' +
+          Math.random() + ')';
         FX.fadeIn(jc, {
           duration: fadeRate * 3,
           delay: 50,

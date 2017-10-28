@@ -1,7 +1,3 @@
-var refreshRate = 10000;
-var fadeRate = 1000;
-var jc = document.getElementById('JC');
-
 (function() {
   var FX = {
     easing: {

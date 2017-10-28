@@ -98,5 +98,6 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     })
   }
+  changeImage();
   setInterval(changeImage, refreshRate);
 });

@@ -106,16 +106,15 @@
       duration: fadeRate,
       delay: 50,
       complete: function() {
-        jc.style.backgroundImage =
-          'url(https://source.unsplash.com/collection/1062065?sig=' +
-          Math.random() + ')';
+        //jc.style.backgroundImage =
+          //'url(https://source.unsplash.com/collection/1062065?sig=' +
+          //Math.random() + ')';
         jc.style.backgroundColor =
-          '#' +
-          Math.floor(Math.random() * 999);
+          '#' + Math.floor(Math.random() * 999);
         FX.fadeIn(jc, {
           duration: fadeRate * 3,
           delay: 50,
-          //complete: function(){}
+          complete: function(){}
         });
       }
     })

@@ -9,13 +9,12 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
     {% else %}{{ page.description | default: site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="{{ '/assets/css/show.css?v=' 
+    <link rel="stylesheet" href="{{ '/assets/css/show.css?v=' 
     | append: site.github.build_revision | relative_url }}">
-    <script type="text/javascript" src="{{ '/assets/js/show.js?v='
+    <!--<script type="text/javascript" src="{{ '/assets/js/show.js?v='
     | append: site.github.build_revision | relative_url }}"></script>-->
   </head>
   <body>
-  <style>body{margin:0;background-color:black}#JC{-o-background-size:contain;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:black;height:720px;width:1280px/*height:100vh;width:100vw*/}</style>
   {{ content }}
   <script type="text/javascript">
   var refreshRate = 10000;

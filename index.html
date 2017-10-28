@@ -3,3 +3,10 @@ layout: slideshow
 ---
 
 <div id="JC" onClick="changeImage()"></div>
+<script type="text/javascript">
+  var refreshRate = 10000;
+  var fadeRate = 1000;
+  var jc = document.getElementById('JC');
+  changeImage(jc, fadeRate);
+  setInterval(changeImage(jc), refreshRate);
+</script>

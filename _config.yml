@@ -1,1 +1,25 @@
 theme: jekyll-theme-leap-day
+
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://js4k.github.io" # the base hostname & protocol for your site
+permalink: /:title
+show_downloads: true
+twitter_username: phil_rigovanov
+github_username:  a1ip
+
+title: Christian slideshow
+
+description: Christian slideshow on Unsplash Source API
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  ignore:
+    envs: [local]
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

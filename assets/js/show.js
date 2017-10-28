@@ -77,16 +77,16 @@
   };
   window.FX = FX;
 })()
-function changeImage(el, fadeRate) {
+function changeImage(el, fade) {
   FX.fadeOut(el, {
-    duration: fadeRate,
+    duration: fade,
     delay: 50,
     complete: function() {
       el.style.backgroundImage =
         'url(https://source.unsplash.com/collection/1062065?sig=' +
         Math.random() + ')';
       FX.fadeIn(el, {
-        duration: fadeRate * 3,
+        duration: fade * 3,
         delay: 50,
         complete: function(){}
       });

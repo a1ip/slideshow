@@ -14,16 +14,16 @@ layout: slideshow
     jc.style.backgroundImage = 'url(https://source.unsplash.com/collection/1062065?sig=' + Math.random() + ')';
   }
   function changeImage() {
-    if (hasTr) { 
+    if (hasTr && hasAn) { 
       jc.classList.remove('fadeIn');
-      fadeOut = 'visibility 0s ' + trTiming + ' ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
+      var fadeOut = 'visibility 0s ' + trTiming + ' ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
       setCss3Style(jc, 'transition', fadeOut);
       jc.classList.add('fadeOut');
     }
     setTimeout(setBG, fadeRate);
-    if (hasTr) {
+    if (hasTr && hasAn) {
       jc.classList.remove('fadeOut');
-      fadeIn = 'visibility 0s ' + trTiming + ' 0s, opacity ' + (fadeRate * 3) + 'ms;';
+      var fadeIn = 'visibility 0s ' + trTiming + ' 0s, opacity ' + (fadeRate * 3) + 'ms;';
       setCss3Style(jc, 'transition', fadeIn);
       jc.classList.add('fadeIn');
     }

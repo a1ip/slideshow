@@ -16,7 +16,7 @@ layout: slideshow
     jc.classList.add('fadeOut');
     setTimeout(setBG, fadeRate);
     jc.classList.remove('fadeOut');
-    jc.style.transition = 'visibility 0s linear 0s, opacity ' + fadeRate + 'ms;';
+    jc.style.transition = 'visibility 0s linear 0s, opacity ' + (fadeRate * 3) + 'ms;';
     jc.classList.add('fadeIn');
   }
   changeImage();

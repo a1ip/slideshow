@@ -16,14 +16,16 @@ layout: slideshow
     if (modern) { 
       jc.classList.remove('fadeIn');
       var fadeOut = 'visibility 0s ' + trTiming + ' ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
-      setCss3Style(jc, 'transition', fadeOut);
+      jc.style.OTransition = fadeOut;
+      jc.style.transition = fadeOut;
       jc.classList.add('fadeOut');
     }
     setTimeout(setBG, fadeRate);
     if (modern) {
       jc.classList.remove('fadeOut');
       var fadeIn = 'visibility 0s ' + trTiming + ' 0s, opacity ' + (fadeRate * 3) + 'ms;';
-      setCss3Style(jc, 'transition', fadeIn);
+      jc.style.OTransition = fadeIn;
+      jc.style.transition = fadeIn;
       jc.classList.add('fadeIn');
     }
   }

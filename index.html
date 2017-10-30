@@ -7,6 +7,7 @@ layout: slideshow
   var refreshRate = 10000;
   var fadeRate = 1200;
   var jc = document.getElementById('JC');
+  var trTiming = 'ease-in';
   var hasTr = detectCSS('transition');
   function setBG() {
     jc.style.backgroundImage = 'url(https://source.unsplash.com/collection/1062065?sig=' + Math.random() + ')';
@@ -14,13 +15,13 @@ layout: slideshow
   function changeImage() {
     if (hasTr) { 
       jc.classList.remove('fadeIn');
-      jc.style.transition = 'visibility 0s linear ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
+      jc.style.transition = 'visibility 0s ' + trTiming + ' ' + ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
       jc.classList.add('fadeOut');
     }
     setTimeout(setBG, fadeRate);
     if (hasTr) {
       jc.classList.remove('fadeOut');
-      jc.style.transition = 'visibility 0s linear 0s, opacity ' + (fadeRate * 3) + 'ms;';
+      jc.style.transition = 'visibility 0s ' + trTiming + ' 0s, opacity ' + (fadeRate * 3) + 'ms;';
       jc.classList.add('fadeIn');
     }
   }

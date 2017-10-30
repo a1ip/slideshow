@@ -8,20 +8,19 @@ layout: slideshow
   var fadeRate = 3200;
   var jc = document.getElementById('JC');
   var trTiming = 'cubic-bezier(.1,.9,.9,.1)';
-  var hasTr = detectCSS('transition');
-  var hasAn = detectCSS('animations');
+  var modern = detectCSS('transition') && detectCSS('animations');
   function setBG() {
     jc.style.backgroundImage = 'url(https://source.unsplash.com/collection/1062065?sig=' + Math.random() + ')';
   }
   function changeImage() {
-    if (hasTr && hasAn) { 
+    if (modern) { 
       jc.classList.remove('fadeIn');
       var fadeOut = 'visibility 0s ' + trTiming + ' ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
       setCss3Style(jc, 'transition', fadeOut);
       jc.classList.add('fadeOut');
     }
     setTimeout(setBG, fadeRate);
-    if (hasTr && hasAn) {
+    if (modern) {
       jc.classList.remove('fadeOut');
       var fadeIn = 'visibility 0s ' + trTiming + ' 0s, opacity ' + (fadeRate * 3) + 'ms;';
       setCss3Style(jc, 'transition', fadeIn);

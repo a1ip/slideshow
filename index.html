@@ -15,7 +15,7 @@ layout: slideshow
   function changeImage() {
     if (hasTr) { 
       jc.classList.remove('fadeIn');
-      jc.style.transition = 'visibility 0s ' + trTiming + ' ' + ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
+      jc.style.transition = 'visibility 0s ' + trTiming + ' ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
       jc.classList.add('fadeOut');
     }
     setTimeout(setBG, fadeRate);

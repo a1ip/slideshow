@@ -4,20 +4,25 @@ layout: slideshow
 
 <div id="JC" onClick="changeImage()"></div>
 <script type="text/javascript">
-  var refreshRate = 10000;
+  var refreshRate = 6000;
   var fadeRate = 1200;
   var jc = document.getElementById('JC');
+  var hasTr = detectCSS('transition');
   function setBG() {
     jc.style.backgroundImage = 'url(https://source.unsplash.com/collection/1062065?sig=' + Math.random() + ')';
   }
   function changeImage() {
-    jc.classList.remove('fadeIn');
-    jc.style.transition = 'visibility 0s linear ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
-    jc.classList.add('fadeOut');
+    if (hasTr) { 
+      jc.classList.remove('fadeIn');
+      jc.style.transition = 'visibility 0s linear ' + fadeRate + 'ms, opacity ' + fadeRate + 'ms;';
+      jc.classList.add('fadeOut');
+    }
     setTimeout(setBG, fadeRate);
-    jc.classList.remove('fadeOut');
-    jc.style.transition = 'visibility 0s linear 0s, opacity ' + (fadeRate * 3) + 'ms;';
-    jc.classList.add('fadeIn');
+    if (hasTr) {
+      jc.classList.remove('fadeOut');
+      jc.style.transition = 'visibility 0s linear 0s, opacity ' + (fadeRate * 3) + 'ms;';
+      jc.classList.add('fadeIn');
+    }
   }
   changeImage();
   setInterval(changeImage, refreshRate);

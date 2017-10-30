@@ -13,4 +13,4 @@
 #
 layout: null
 ---
-{% include_relative prefixfree.js %}{% include_relative vunits.js %}{% include_relative detectcss.js %}
+{% include_relative prefixfree.js %}{% include_relative vunits.js %}{% include_relative detectcss.js %}{% setcss3style.js %}

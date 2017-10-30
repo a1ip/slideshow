@@ -1,0 +1,1 @@
+function toCamelCase(e){return e.toLowerCase().replace(/(\-[a-z])/g,function(e){return e.toUpperCase().replace("-","")})}function setCss3Style(e,t,o){vendors.forEach(function(n){toCamelCase(n+t);p in e.style&&(e.style[p]=o)})}var vendors=["-webkit-","-o-","-moz-","-ms-",""];

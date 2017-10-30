@@ -1,4 +1,4 @@
 ---
 layout: null
 ---
-{% include prefixfree.js %}{% include vunits.js %}{% include fade.js %}
+{% include_relative prefixfree.js %}{% include_relative vunits.js %}{% include_relative fade.js %}

@@ -13,4 +13,4 @@
 #
 layout: null
 ---
-{% include_relative prefixfree.js %}{% include_relative vunits.js %}{% include_relative modernizr-transition.js %}
+{% include_relative prefixfree.js %}{% include_relative vunits.js %}{% include_relative detectcss.js %}

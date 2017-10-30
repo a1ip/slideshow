@@ -9,20 +9,13 @@ layout: slideshow
   var jc = document.getElementById('JC');
   
   function changeImage() {
-    FX.fadeOut(jc, {
-      duration: fadeRate,
-      delay: 50,
-      complete: function() {
-        jc.style.backgroundImage =
-          'url(https://source.unsplash.com/collection/1062065?sig=' +
-          Math.random() + ')';
-        FX.fadeIn(jc, {
-          duration: fadeRate * 3,
-          delay: 50,
-          complete: function(){return;}
-        });
-      }
-    })
+    jc.classList.remove('fadeIn');
+    jc.classList.add('fadeOut');
+    setTimeout(jc.style.backgroundImage =
+      'url(https://source.unsplash.com/collection/1062065?sig=' +
+      Math.random() + ')', 300);
+    jc.classList.remove('fadeOut');
+    jc.classList.add('fadeIn');
   }
   changeImage();
   setInterval(changeImage, refreshRate);

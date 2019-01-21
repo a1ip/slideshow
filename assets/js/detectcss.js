@@ -1,1 +1,0 @@
-function detectCSS(e){for(var e=e.replace(/-(\w)/g,function(e,t){return t.toUpperCase()}),t=",Icab,Khtml,Moz,Ms,O,Webkit".split(","),n=0;n<t.length;++n)if(1==n&&(e=e.slice(0,1).toUpperCase()+e.slice(1)),t[n]+e in document.documentElement.style)return!0;return!1}

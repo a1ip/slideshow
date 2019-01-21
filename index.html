@@ -2,25 +2,20 @@
 layout: slideshow
 ---
 
-<div id="JC" onClick="setBG()"></div>
-<script type="text/javascript">
-  var refreshRate = 10000;
-  var jc = document.getElementById('JC');
-  var modern = detectCSS("transition") && detectCSS("animations");
-  function setBG() {
-    jc.style.backgroundImage = 'url(https://source.unsplash.com/collection/1062065?sig=' + Math.random() + ')';
-  }
-  function changeImage() {
-    if (modern) { 
-      jc.classList.remove('fadeIn');
-      jc.classList.add('fadeOut');
-    }
-    setTimeout(setBG, 3000);
-    if (modern) {
-      jc.classList.remove('fadeOut');
-      jc.classList.add('fadeIn');
-    }
-  }
-  changeImage();
-  setInterval(changeImage, refreshRate);
-</script>
+<ul class="slideshow">
+  <li><span>Слайд №1</span>
+      <div>
+          <h3>«Для меня жизнь — Христос, и смерть — приобретение».</h3>
+      </div>
+  </li>
+{% for i in (2..6) %}
+  <li>
+      <span>Слайд&nbsp;№{{ i }}</span>
+	</li>
+{% endfor %}
+</ul>
+<div class="container">
+    <header>
+        <h1>Я Бог Всемогущий;<br/><span>ходи предо Мною и будь непорочен.</span></h1>
+    </header>
+</div>

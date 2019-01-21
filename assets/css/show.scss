@@ -2,7 +2,7 @@
 ---
 
 
-$num: 21s;
+$num: 21;
 /* CSS reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
 	margin:0;
@@ -115,7 +115,7 @@ a{
     animation: titleAnimation 6s * $num linear infinite 0s;
 }
 .slideshow li:nth-child(1) span { background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=1) }
-@for $n from 2 through #{$num} {
+@for $n from 2 through $num {
   .slideshow li:nth-child(#{$n}) span {
     background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=#{$n});
     -webkit-animation-delay: 6s * ($n - 1);

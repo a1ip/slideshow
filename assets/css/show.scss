@@ -113,10 +113,10 @@ a{
     -ms-animation: titleAnimation 36s linear infinite 0s;
     animation: titleAnimation 36s linear infinite 0s;
 }
-.slideshow li:nth-child(1) span { background-image: url(https://source.unsplash.com/collection/1062065/1920x1080/?sig=1) }
+.slideshow li:nth-child(1) span { background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=1) }
 @for $n from 2 through 21 {
   .slideshow li:nth-child(#{$n}) span {
-    background-image: url(https://source.unsplash.com/collection/1062065/1920x1080/?sig=#{$n});
+    background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=#{$n});
     -webkit-animation-delay: 6s * ($n - 1);
     -moz-animation-delay: 6s * ($n - 1);
     -o-animation-delay: 6s * ($n - 1);

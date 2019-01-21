@@ -1,23 +1,6 @@
 ---
 ---
 
-@mixin slide($n) {
-  .slideshow li:nth-child(#{$n}) span {
-    background-image: url(https://source.unsplash.com/collection/1062065?sig=#{$n});
-    -webkit-animation-delay: 6s * ($n - 1);
-    -moz-animation-delay: 6s * ($n - 1);
-    -o-animation-delay: 6s * ($n - 1);
-    -ms-animation-delay: 6s * ($n - 1);
-    animation-delay: 6s * ($n - 1);
-}
-  .slideshow li:nth-child(#{$n}) div {
-    -webkit-animation-delay: 6s * ($n - 1);
-    -moz-animation-delay: 6s * ($n - 1);
-    -o-animation-delay: 6s * ($n - 1);
-    -ms-animation-delay: 6s * ($n - 1);
-    animation-delay: 6s * ($n - 1);
-  }
-}
 
 /* CSS reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
@@ -84,34 +67,6 @@ a{
 .clr{
 	clear: both;
 }
-.container > header{
-	padding: 30px 30px 10px 20px;
-	margin: 0px 20px 10px 20px;
-	position: relative;
-	display: block;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    text-align: left;
-}
-.container > header h1{
-  font-family: "helvetica neue", helvetica;
-	font-size: 35px;
-	line-height: 35px;
-	position: relative;
-	font-weight: 400;
-	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-    padding: 0px 0px 5px 0px;
-}
-.container > header h1 span{
-
-}
-.container > header h2, p.info{
-	font-size: 16px;
-	font-style: italic;
-	color: #f8f8f8;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-}
-
 .slideshow,
 .slideshow:after {
     position: fixed;
@@ -158,20 +113,24 @@ a{
     -ms-animation: titleAnimation 36s linear infinite 0s;
     animation: titleAnimation 36s linear infinite 0s;
 }
-.slideshow li div h3 {
-  font-family: "helvetica neue", helvetica;
-  text-transform: uppercase;
-  font-size: 80px;
-  padding: 0;
-  line-height: 200px;
-	color: rgba(255,255,255, 0.8);
-}
 .slideshow li:nth-child(1) span { background-image: url(https://source.unsplash.com/collection/1062065?sig=1) }
-@include slide(2);
-@include slide(3);
-@include slide(4);
-@include slide(5);
-@include slide(6);
+@for $n from 2 through 280 {
+  .slideshow li:nth-child(#{$n}) span {
+    background-image: url(https://source.unsplash.com/collection/1062065?sig=#{$n});
+    -webkit-animation-delay: 6s * ($n - 1);
+    -moz-animation-delay: 6s * ($n - 1);
+    -o-animation-delay: 6s * ($n - 1);
+    -ms-animation-delay: 6s * ($n - 1);
+    animation-delay: 6s * ($n - 1);
+  }
+  .slideshow li:nth-child(#{$n}) div {
+    -webkit-animation-delay: 6s * ($n - 1);
+    -moz-animation-delay: 6s * ($n - 1);
+    -o-animation-delay: 6s * ($n - 1);
+    -ms-animation-delay: 6s * ($n - 1);
+    animation-delay: 6s * ($n - 1);
+  }
+}
 
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation { 
@@ -271,107 +230,6 @@ a{
 	25% {
 	    opacity: 0;
 	    transform: scale(1.1);
-	}
-	100% { opacity: 0 }
-}
-/* Animation for the title */
-@-webkit-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -webkit-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -webkit-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -webkit-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -webkit-transform: scale(10);
-	}
-	100% { opacity: 0 }
-}
-@-moz-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -moz-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -moz-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -moz-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -moz-transform: scale(10);
-	}
-	100% { opacity: 0 }
-}
-@-o-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -o-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -o-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -o-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -o-transform: scale(10);
-	}
-	100% { opacity: 0 }
-}
-@-ms-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -ms-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -ms-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -ms-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -webkit-transform: scale(10);
-	}
-	100% { opacity: 0 }
-}
-@keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    transform: scale(10);
 	}
 	100% { opacity: 0 }
 }

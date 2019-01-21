@@ -8,6 +8,7 @@ twitter_username: phil_rigovanov
 github_username:  a1ip
 title: Христианское слайдшоу
 description: Христианское слайдшоу на Unsplash Source API
+slides: 10
 
 compress_html:
   clippings: all

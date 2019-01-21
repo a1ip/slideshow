@@ -3,6 +3,7 @@
 
 
 $num: 21;
+$time: 10s;
 /* CSS reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
 	margin:0;
@@ -77,10 +78,6 @@ a{
     left: 0px;
     z-index: 0;
 }
-.slideshow:after {
-    content: '';
-    background: transparent url(../images/circuit-board.svg) repeat top left;
-}
 .slideshow li span {
     width: 100%;
     height: 100%;
@@ -94,11 +91,11 @@ a{
     opacity: 0;
     z-index: 0;
 	-webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation 6s * $num linear infinite 0s;
-    -moz-animation: imageAnimation 6s * $num linear infinite 0s;
-    -o-animation: imageAnimation 6s * $num linear infinite 0s;
-    -ms-animation: imageAnimation 6s * $num linear infinite 0s;
-    animation: imageAnimation 6s * $num linear infinite 0s;
+    -webkit-animation: imageAnimation $time * $num linear infinite 0s;
+    -moz-animation: imageAnimation $time * $num linear infinite 0s;
+    -o-animation: imageAnimation $time * $num linear infinite 0s;
+    -ms-animation: imageAnimation $time * $num linear infinite 0s;
+    animation: imageAnimation $time * $num linear infinite 0s;
 }
 .slideshow li div {
     z-index: 1000;
@@ -108,28 +105,28 @@ a{
     width: 100%;
     text-align: center;
     opacity: 0;
-    -webkit-animation: titleAnimation 6s * $num linear infinite 0s;
-    -moz-animation: titleAnimation 6s * $num linear infinite 0s;
-    -o-animation: titleAnimation 6s * $num linear infinite 0s;
-    -ms-animation: titleAnimation 6s * $num linear infinite 0s;
-    animation: titleAnimation 6s * $num linear infinite 0s;
+    -webkit-animation: titleAnimation $time * $num linear infinite 0s;
+    -moz-animation: titleAnimation $time * $num linear infinite 0s;
+    -o-animation: titleAnimation $time * $num linear infinite 0s;
+    -ms-animation: titleAnimation $time * $num linear infinite 0s;
+    animation: titleAnimation $time * $num linear infinite 0s;
 }
 .slideshow li:nth-child(1) span { background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=1) }
 @for $n from 2 through $num {
   .slideshow li:nth-child(#{$n}) span {
     background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=#{$n});
-    -webkit-animation-delay: 6s * ($n - 1);
-    -moz-animation-delay: 6s * ($n - 1);
-    -o-animation-delay: 6s * ($n - 1);
-    -ms-animation-delay: 6s * ($n - 1);
-    animation-delay: 6s * ($n - 1);
+    -webkit-animation-delay: $time * ($n - 1);
+    -moz-animation-delay: $time * ($n - 1);
+    -o-animation-delay: $time * ($n - 1);
+    -ms-animation-delay: $time * ($n - 1);
+    animation-delay: $time * ($n - 1);
   }
   .slideshow li:nth-child(#{$n}) div {
-    -webkit-animation-delay: 6s * ($n - 1);
-    -moz-animation-delay: 6s * ($n - 1);
-    -o-animation-delay: 6s * ($n - 1);
-    -ms-animation-delay: 6s * ($n - 1);
-    animation-delay: 6s * ($n - 1);
+    -webkit-animation-delay: $time * ($n - 1);
+    -moz-animation-delay: $time * ($n - 1);
+    -o-animation-delay: $time * ($n - 1);
+    -ms-animation-delay: $time * ($n - 1);
+    animation-delay: $time * ($n - 1);
   }
 }
 

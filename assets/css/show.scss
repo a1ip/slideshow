@@ -91,25 +91,11 @@ a{
     opacity: 0;
     z-index: 0;
 	-webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation $time * $num linear infinite 0s;
-    -moz-animation: imageAnimation $time * $num linear infinite 0s;
-    -o-animation: imageAnimation $time * $num linear infinite 0s;
-    -ms-animation: imageAnimation $time * $num linear infinite 0s;
-    animation: imageAnimation $time * $num linear infinite 0s;
-}
-.slideshow li div {
-    z-index: 1000;
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    -webkit-animation: titleAnimation $time * $num linear infinite 0s;
-    -moz-animation: titleAnimation $time * $num linear infinite 0s;
-    -o-animation: titleAnimation $time * $num linear infinite 0s;
-    -ms-animation: titleAnimation $time * $num linear infinite 0s;
-    animation: titleAnimation $time * $num linear infinite 0s;
+    -webkit-animation: imageAnimation $time * 10 linear infinite 0s;
+    -moz-animation: imageAnimation $time * 10 linear infinite 0s;
+    -o-animation: imageAnimation $time * 10 linear infinite 0s;
+    -ms-animation: imageAnimation $time * 10 linear infinite 0s;
+    animation: imageAnimation $time * 10 linear infinite 0s;
 }
 .slideshow li:nth-child(1) span { background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=1) }
 @for $n from 2 through $num {

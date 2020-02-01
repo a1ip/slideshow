@@ -2,13 +2,10 @@ theme: jekyll-theme-leap-day
 
 baseurl: /show # the subpath of your site, e.g. /blog
 #url: "http://a1ip.github.io" # the base hostname & protocol for your site
-permalink: /:title
-show_downloads: true
-twitter_username: phil_rigovanov
-github_username:  a1ip
 title: Христианское слайдшоу
 description: Христианское слайдшоу на Unsplash Source API
 slides: 10
+delay: 6 # animation time in seconds
 
 compress_html:
   clippings: all

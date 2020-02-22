@@ -1,84 +1,18 @@
 ---
 ---
-
-
 $num: {{ site.slides }};
 $time: {{ site.delay }}s;
-/* CSS reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+html,body,ul,li { 
 	margin:0;
 	padding:0;
 }
-html,body {
-	margin:0;
-	padding:0;
-}
-table {
-	border-collapse:collapse;
-	border-spacing:0;
-}
-fieldset,img { 
-	border:0;
-}
-input{
-	border:1px solid #b0b0b0;
-	padding:3px 5px 4px;
-	color:#979797;
-	width:190px;
-}
-address,caption,cite,code,dfn,th,var {
-	font-style:normal;
-	font-weight:normal;
-}
-ol,ul {
+ul {
 	list-style:none;
-}
-caption,th {
-	text-align:left;
-}
-h1,h2,h3,h4,h5,h6 {
-	font-size:100%;
-	font-weight:normal;
-}
-q:before,q:after {
-	content:'';
-}
-abbr,acronym { border:0;
-}
-/* General Demo Style */
-body{
-  font-family: "helvetica neue", helvetica;
-	background: #000;
-	font-weight: 400;
-	font-size: 15px;
-	color: #aa3e03;
-	overflow-y: scroll;
-	overflow-x: hidden;
 }
 .ie7 body{
 	overflow:hidden;
 }
-a{
-	color: #333;
-	text-decoration: none;
-}
-.container{
-	position: relative;
-	text-align: center;
-}
-.clr{
-	clear: both;
-}
-.slideshow,
-.slideshow:after {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 0;
-}
-.slideshow li span {
+.slideshow li {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -91,32 +25,23 @@ a{
     opacity: 0;
     z-index: 0;
 	-webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation $time * 10 linear infinite 0s;
-    -moz-animation: imageAnimation $time * 10 linear infinite 0s;
-    -o-animation: imageAnimation $time * 10 linear infinite 0s;
-    -ms-animation: imageAnimation $time * 10 linear infinite 0s;
-    animation: imageAnimation $time * 10 linear infinite 0s;
+    -webkit-animation: imageAnimation $time linear infinite 0s;
+    -moz-animation: imageAnimation $time linear infinite 0s;
+    -o-animation: imageAnimation $time linear infinite 0s;
+    -ms-animation: imageAnimation $time linear infinite 0s;
+    animation: imageAnimation $time linear infinite 0s;
 }
-.slideshow li:nth-child(1) span { background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=1) }
-@for $n from 2 through $num {
-  .slideshow li:nth-child(#{$n}) span {
+@for $n from 0 through $num {
+  .slideshow li:nth-child(#{$n}) {
     background-image: url(https://source.unsplash.com/collection/1062065/1440×900/?sig=#{$n});
-    -webkit-animation-delay: $time * ($n - 1);
-    -moz-animation-delay: $time * ($n - 1);
-    -o-animation-delay: $time * ($n - 1);
-    -ms-animation-delay: $time * ($n - 1);
-    animation-delay: $time * ($n - 1);
-  }
-  .slideshow li:nth-child(#{$n}) div {
-    -webkit-animation-delay: $time * ($n - 1);
-    -moz-animation-delay: $time * ($n - 1);
-    -o-animation-delay: $time * ($n - 1);
-    -ms-animation-delay: $time * ($n - 1);
-    animation-delay: $time * ($n - 1);
+    -webkit-animation-delay: $time / 5 * $n;
+    -moz-animation-delay: $time / 5 * $n;
+    -o-animation-delay: $time / 5 * $n;
+    -ms-animation-delay: $time / 5 * $n;
+    animation-delay: $time / 5 * $n;
   }
 }
 
-/* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation { 
 	0% {
 	    opacity: 0;
@@ -218,6 +143,6 @@ a{
 	100% { opacity: 0 }
 }
 /* Show at least something when animations not supported */
-.no-cssanimations .slideshow li span{
+.no-cssanimations .slideshow li{
 	opacity: 1;
 }

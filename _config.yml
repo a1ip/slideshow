@@ -1,6 +1,4 @@
-theme: jekyll-theme-leap-day
-
-baseurl: /show # the subpath of your site, e.g. /blog
+# baseurl: /slideshow # the subpath of your site, e.g. /blog
 #url: "http://a1ip.github.io" # the base hostname & protocol for your site
 title: Христианское слайдшоу
 description: Христианское слайдшоу на Unsplash Source API
@@ -12,10 +10,3 @@ compress_html:
   comments: ["<!-- ", " -->"]
   ignore:
     envs: [local]
-
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-    values:
-      layout: "default"
